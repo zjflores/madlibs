@@ -9,9 +9,10 @@
     	Let's play!<br>
     	Input a person: <input type="text" name="person"><br>
     	Choose a color: <select name="color">
-			<option value="yellow">Yellow</option>
-			<option value="blue">Blue</option>
-			<option value="red">Red</option>
+			{% for color in colors %}
+			<option value="{{color}}">{{color}}</option>
+			{% endfor %}
+			
 		</select><br>
 		Noun: <input type="text" name="noun"><br>
 		Adjective: <input type="text" name="adjective"><br>
