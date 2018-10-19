@@ -1,11 +1,10 @@
-<!doctype html>
-<html>
-<head>
-  <title>Maddening Libbing</title>
-</head>
-<body>
+
+{% extends 'base.html' %}
+
+{% block title %}Maddening Libbing{% endblock %}
+
+{% block content %} 
 There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab.
 When {{ person }} went to pick it up, it burst into flames in a totally
 {{ adjective }} way.
-</body>
-</html>
+{% endblock %}

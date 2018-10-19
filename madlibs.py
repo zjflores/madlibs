@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 
 # "__name__" is a special Python variable for the name of the current module.
 # Flask wants to know this to know what any imported things are relative to.
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 AWESOMENESS = [
     'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza',
@@ -48,11 +48,11 @@ def show_madlib_form():
     colors = ["red", "yellow", "blue", "lavender", "periwinkle", "salmon", "burnt sienna", "mint", "teal"]
 
     play_game = request.args.get('play_game')
-    if play_game == "yes":
+    if play_game == "no":
+        return render_template("goodbye.html")
+    else:
         return render_template('game.html',
                                 colors=colors)
-    else:
-        return render_template("goodbye.html")
 
 
 @app.route('/madlib')
