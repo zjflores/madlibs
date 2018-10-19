@@ -1,3 +1,8 @@
 body {
 	background-image: url("https://orig00.deviantart.net/e13a/f/2013/004/5/e/tf2_balloonicorn_by_phishritzy-d5qgzw3.jpg");
+	color: pink;
+	background-color: grey;
+	background-size:     500px 500px;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: right top;
 }
